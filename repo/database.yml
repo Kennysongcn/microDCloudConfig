@@ -3,7 +3,7 @@ spring:
     login-username: druid_admin
     login-password: 123456
     url: jdbc:mysql://192.168.0.113:3306/microdcloud?useUnicode=true&characterEncoding=UTF-8&useSSL=true
-    driver-class-name:com.mysql.jdbc.Driver
+    driver-class-name: com.mysql.jdbc.Driver
     username: root
     password: changing20050314
     type: com.alibaba.druid.pool.DruidDataSource
