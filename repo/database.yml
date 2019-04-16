@@ -1,8 +1,11 @@
 spring:
   datasource:
-    url: jdbc:mysql://localhost:3306/springcloud?useUnicode=true&characterEncoding=UTF-8&useSSL=true
+    login-username: druid_admin
+    login-password: 123456
+    url: jdbc:mysql://192.168.0.113:3306/microdcloud?useUnicode=true&characterEncoding=UTF-8&useSSL=true
+    driver-class-name: com.mysql.jdbc.Driver
     username: root
-    password: root
+    password: changing20050314
     type: com.alibaba.druid.pool.DruidDataSource
     druid:
       initial-size: 5
@@ -20,6 +23,7 @@ spring:
       time-between-eviction-runs-millis: 60000
       min-evictable-idle-time-millis: 300000
       filters: stat,wall,log4j
+      logSlowSql: true
       filter:
         stat:
           log-slow-sql: true
@@ -28,8 +32,7 @@ spring:
         enable: true
       stat-view-servlet:
         enabled: true
-        login-username: druid_admin
-        login-password: 123456
+
 #logging:
  # level:
   #  com:
